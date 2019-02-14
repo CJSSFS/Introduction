@@ -9,7 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+var lighton = true
+    
+    @IBOutlet weak var lightbutton: UIButton!
+    @IBAction func buttonPressed(_ sender: Any) {
+        lighton = !lighton
+        updateUI()
+    }
+    func updateUI() {
+        if lighton {
+            view.backgroundColor = .white
+            lightbutton.setTitle("Off", for: .normal)
+        } else {
+            view.backgroundColor = .black
+            lightbutton.setTitle("On", for: .normal)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
