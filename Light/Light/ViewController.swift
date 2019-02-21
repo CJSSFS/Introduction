@@ -19,10 +19,10 @@ var lighton = true
     func updateUI() {
         if lighton {
             view.backgroundColor = .white
-            lightbutton.setTitle("Off", for: .normal)
+            lightbutton.setTitle("", for: .normal)
         } else {
             view.backgroundColor = .black
-            lightbutton.setTitle("On", for: .normal)
+            lightbutton.setTitle("", for: .normal)
         }
     }
     override func viewDidLoad() {
